@@ -15,6 +15,12 @@ def calc_average_temperature(num_list):
 def calc_min_max_temperature(num_list):
     print("Min_Max temperature=["+str(min(num_list))+", "+str(max(num_list))+"]")
 
+def calc_median_temperature(num_list):
+    num_list.sort()
+    mid = len(num_list)//2
+    res = (num_list[mid]+num_list[~mid])/2
+    print("Median temperature="+str(res))
+
 def main():
     print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
     display_main_menu()
@@ -22,5 +28,6 @@ def main():
     print(num_list)
     calc_average_temperature(num_list)
     calc_min_max_temperature(num_list)
+    calc_median_temperature(num_list)
 
 main()
